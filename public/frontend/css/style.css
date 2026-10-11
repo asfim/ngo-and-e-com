@@ -1,7 +1,7 @@
 /* ============ WITNESS FOUNDATION DESIGN SYSTEM ============ */
 :root {
-  --orange: #D8612A;
-  --orange-ink: #B84B1B;
+  --orange: #F5793C;
+  --orange-ink: #D4601A;
   --teal: #111111;
   --teal-deep: #000000;
   --ink: #111111;
@@ -32,7 +32,7 @@
     --teal-deep: #000000;
     --on-teal: #FFFFFF;
     --on-teal-dim: #A3A3A3;
-    --orange: #F77A3C;
+    --orange: #F5793C;
   }
 }
 
@@ -46,7 +46,7 @@
   --teal-deep: #000000;
   --on-teal: #FFFFFF;
   --on-teal-dim: #A3A3A3;
-  --orange: #F77A3C;
+  --orange: #F5793C;
 }
 
 html {
