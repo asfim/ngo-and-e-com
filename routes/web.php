@@ -11,3 +11,5 @@ Route::get('/impact', [HomeController::class, 'impact'])->name('impact');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/donate', [HomeController::class, 'donate'])->name('donate');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('/blog/{slug}', [HomeController::class, 'blogShow'])->name('blog.show');

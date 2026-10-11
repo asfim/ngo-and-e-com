@@ -59,3 +59,21 @@ test('contact page returns a successful response', function () {
         ->assertSee('Send us a message')
         ->assertSee('Office hours');
 });
+
+test('blog page returns a successful response and renders articles', function () {
+    $this->get(route('blog'))
+        ->assertOk()
+        ->assertViewIs('frontend.pages.blog')
+        ->assertSee('Voices from the frontlines')
+        ->assertSee('Documenting Hope')
+        ->assertSee('Lessons from 100 Neighborhood Mediation Circles');
+});
+
+test('single blog post page returns a successful response', function () {
+    $this->get(route('blog.show', 'documenting-hope-ukhiya'))
+        ->assertOk()
+        ->assertViewIs('frontend.pages.blog-detail')
+        ->assertSee('Documenting Hope')
+        ->assertSee('Fahmida Rahman');
+});
+

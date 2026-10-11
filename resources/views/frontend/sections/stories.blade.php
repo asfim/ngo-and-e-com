@@ -6,7 +6,7 @@
       <h2>Stories from the Field</h2>
     </div>
     <div class="stories-grid">
-      <a href="#stories" class="story-card reveal">
+      <a href="{{ route('blog.show', 'documenting-hope-ukhiya') }}" class="story-card reveal">
         <div class="story-media">
           <div class="doc-panel" style="width:100%;height:100%;">
             <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Friends creating a shared story together">
@@ -18,10 +18,10 @@
         <p class="excerpt">When we opened our participatory filmmaking cohort in Cox's Bazar, we expected modest interest. Instead, nearly 200 young people applied for a chance to point a camera at their own lives.</p>
         <div class="story-quote">"I didn't want someone else to tell my story wrong again."</div>
         <div class="story-meta">Cox's Bazar · 2024 · Supported by community partners</div>
-        <span class="story-read">Read story →</span>
+        <span class="story-read">Read dispatch →</span>
       </a>
 
-      <a href="#stories" class="story-card reveal">
+      <a href="{{ route('blog.show', 'countering-hate-in-15-seconds') }}" class="story-card reveal">
         <div class="story-media">
           <div class="doc-panel" style="width:100%;height:100%;">
             <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Community members collaborating around a table">
@@ -33,10 +33,10 @@
         <p class="excerpt">Migrant workers are often the subject of surveillance, not the beneficiaries of technology. We built a digital safety tool with them instead, testing every feature against their real risks.</p>
         <div class="story-quote">"For once, the app asked us what we needed."</div>
         <div class="story-meta">Dhaka · 2025 · Digital Safety for Migrant Workers</div>
-        <span class="story-read">Read story →</span>
+        <span class="story-read">Read dispatch →</span>
       </a>
 
-      <a href="#stories" class="story-card reveal">
+      <a href="{{ route('blog.show', 'lessons-from-100-mediation-circles') }}" class="story-card reveal">
         <div class="story-media">
           <div class="doc-panel" style="width:100%;height:100%;">
             <img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Two generations sharing a conversation">
@@ -48,11 +48,11 @@
         <p class="excerpt">Our dialogue circles seat generations that rarely speak plainly to each other. In one session, a disagreement about migration became, an hour later, a shared plan.</p>
         <div class="story-quote">"We were arguing the same point from two different griefs."</div>
         <div class="story-meta">Chittagong · 2024 · Shanti O Sampriti Sanglap</div>
-        <span class="story-read">Read story →</span>
+        <span class="story-read">Read dispatch →</span>
       </a>
     </div>
     <div class="more-row reveal">
-      <a href="{{ route('impact') }}" class="btn-more">More stories &amp; impact <span>→</span></a>
+      <a href="{{ route('blog') }}" class="btn-more">More stories &amp; blog dispatches <span>→</span></a>
     </div>
   </div>
 </section>

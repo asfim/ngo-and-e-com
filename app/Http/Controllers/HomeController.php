@@ -61,4 +61,21 @@ class HomeController extends Controller
     {
         return view('frontend.pages.contact');
     }
+
+    /**
+     * Display the Blog index page.
+     */
+    public function blog(): View
+    {
+        return view('frontend.pages.blog');
+    }
+
+    /**
+     * Display a single Blog post.
+     */
+    public function blogShow(string $slug): View
+    {
+        return view('frontend.pages.blog-detail', ['slug' => $slug]);
+    }
 }
+
