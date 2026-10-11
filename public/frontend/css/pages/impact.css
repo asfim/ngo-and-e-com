@@ -1,7 +1,7 @@
 /* ================= IMPACT PAGE ================= */
 .im-hero {
   padding: calc(84px + env(safe-area-inset-top, 0px) + 80px) 0 0;
-  background: var(--teal);
+  background: #0A0A0A;
   color: #fff;
   text-align: center;
   position: relative;
@@ -17,28 +17,29 @@
   top: -420px;
   transform: translateX(-50%);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(115,217,165,.18), transparent 65%);
+  background: radial-gradient(circle, rgba(216,97,42,.18), transparent 65%);
 }
 
 .im-hero .wrap { position: relative; }
-.im-crumb { font-size: 13px; color: #A9CFC6; display: inline-flex; gap: 8px; margin-bottom: 24px; }
-.im-crumb a { text-decoration: none; }
+.im-crumb { font-size: 13px; color: #A3A3A3; display: inline-flex; gap: 8px; margin-bottom: 24px; }
+.im-crumb a { text-decoration: none; color: #FFFFFF; }
+.im-crumb a:hover { color: var(--orange); }
 .im-hero h1 { font-size: clamp(42px, 6vw, 88px); line-height: .98; color: #fff; max-width: 14ch; margin: 0 auto; }
-.im-hero h1 em { color: #F6B98F; }
-.im-hero p { margin: 26px auto 0; max-width: 56ch; font-size: 18px; color: #D6E8E3; }
+.im-hero h1 em { color: var(--orange); }
+.im-hero p { margin: 26px auto 0; max-width: 56ch; font-size: 18px; color: #D4D4D4; }
 
 .im-strip {
   margin-top: 70px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: var(--teal-deep);
+  background: #000000;
   border-top: 1px solid rgba(255,255,255,.12);
 }
 
 .im-strip div { padding: 44px 20px; border-right: 1px solid rgba(255,255,255,.1); }
 .im-strip div:last-child { border-right: 0; }
 .im-strip b { display: block; font-family: var(--serif); font-size: clamp(36px, 4.4vw, 60px); font-weight: 600; line-height: 1; color: #fff; }
-.im-strip span { display: block; margin-top: 10px; font-size: 13.5px; color: #A9CFC6; }
+.im-strip span { display: block; margin-top: 10px; font-size: 13.5px; color: #A3A3A3; }
 
 /* Bars */
 .im-bars { padding: 120px 0; }

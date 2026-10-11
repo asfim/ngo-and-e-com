@@ -61,9 +61,9 @@
                 <div class="eyebrow">Where your money goes</div>
                 <h2>Every taka, accounted for</h2>
                 <ul class="dn-legend">
-                    <li><span class="sw" style="background:var(--teal)"></span><div>Field programmes<small>Dialogue, film, digital safety, mediation</small></div><b>68%</b></li>
+                    <li><span class="sw" style="background:#111111"></span><div>Field programmes<small>Dialogue, film, digital safety, mediation</small></div><b>68%</b></li>
                     <li><span class="sw" style="background:var(--orange)"></span><div>Research &amp; advocacy<small>Evidence, briefs, policy engagement</small></div><b>17%</b></li>
-                    <li><span class="sw" style="background:#E7B83E"></span><div>Monitoring &amp; safeguarding<small>Verification, community feedback</small></div><b>9%</b></li>
+                    <li><span class="sw" style="background:#737373"></span><div>Monitoring &amp; safeguarding<small>Verification, community feedback</small></div><b>9%</b></li>
                     <li><span class="sw" style="background:var(--paper-line)"></span><div>Administration<small>Audits, compliance, operations</small></div><b>6%</b></li>
                 </ul>
             </div>

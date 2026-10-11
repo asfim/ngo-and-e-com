@@ -70,7 +70,7 @@
   aspect-ratio: 1;
   margin: 0 auto;
   border-radius: 50%;
-  background: conic-gradient(var(--teal) 0 68%, var(--orange) 68% 85%, #E7B83E 85% 94%, var(--paper-line) 94% 100%);
+  background: conic-gradient(#111111 0 68%, var(--orange) 68% 85%, #737373 85% 94%, var(--paper-line) 94% 100%);
 }
 
 .dn-donut::after {
