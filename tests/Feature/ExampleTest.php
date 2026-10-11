@@ -5,7 +5,9 @@ test('homepage returns a successful response and renders witness foundation', fu
         ->assertOk()
         ->assertViewIs('frontend.home')
         ->assertSee('Witness Foundation')
-        ->assertSee('Peace Begins With Me');
+        ->assertSee('Peace Begins With Me')
+        ->assertSee('News &amp; Events', false)
+        ->assertSee('National Dialogue on Peace &amp; Digital Safety', false);
 });
 
 test('approach page returns a successful response', function () {

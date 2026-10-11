@@ -30,6 +30,9 @@
     {{-- About preview → /about --}}
     @include('frontend.sections.about')
 
+    {{-- News & Events preview → /about#news-events --}}
+    @include('frontend.sections.news-events')
+
     {{-- Support calculator → /donate --}}
     @include('frontend.sections.support-calculator')
 
