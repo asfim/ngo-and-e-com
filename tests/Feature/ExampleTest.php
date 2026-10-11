@@ -77,3 +77,49 @@ test('single blog post page returns a successful response', function () {
         ->assertSee('Fahmida Rahman');
 });
 
+test('shop page returns a successful response and lists fair-trade products', function () {
+    $this->get(route('shop.index'))
+        ->assertOk()
+        ->assertViewIs('frontend.shop.index')
+        ->assertSee('Flash Deals')
+        ->assertSee('Handwoven Indigenous Pinon Waistcoat')
+        ->assertSee('Eyes of the River');
+});
+
+test('product details page returns a successful response with artisan story', function () {
+    $this->get(route('shop.show', 'handwoven-chakma-waistcoat'))
+        ->assertOk()
+        ->assertViewIs('frontend.shop.show')
+        ->assertSee('Handwoven Indigenous Pinon Waistcoat')
+        ->assertSee('Rangamati Women Weavers')
+        ->assertSee('Buy Now');
+});
+
+test('checkout page returns a successful response and displays order calculation', function () {
+    $this->get(route('shop.checkout', ['item' => 'handwoven-chakma-waistcoat', 'qty' => 2]))
+        ->assertOk()
+        ->assertViewIs('frontend.shop.checkout')
+        ->assertSee('Shipping &amp; Delivery Details', false)
+        ->assertSee('Cash on Delivery')
+        ->assertSee('Place Fair-Trade Order', false);
+});
+
+test('processing checkout renders order confirmation successfully', function () {
+    $this->post(route('shop.checkout.process'), [
+        'name' => 'Fahim Rahman',
+        'phone' => '01712345678',
+        'address' => 'House 12, Road 4, Dhanmondi, Dhaka',
+        'city' => 'Dhaka',
+        'payment_method' => 'Cash on Delivery',
+        'product_name' => 'Handwoven Indigenous Pinon Waistcoat',
+        'qty' => 1,
+        'total' => 1950,
+    ])
+        ->assertOk()
+        ->assertViewIs('frontend.shop.success')
+        ->assertSee('Thank you for your fair-trade order')
+        ->assertSee('Fahim Rahman')
+        ->assertSee('01712345678');
+});
+
+

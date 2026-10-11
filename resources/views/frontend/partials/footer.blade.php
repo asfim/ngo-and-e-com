@@ -22,6 +22,7 @@
         <a href="{{ route('impact') }}">Impact</a>
         <a href="{{ route('about') }}">About</a>
         <a href="{{ route('blog') }}">Blog &amp; Dispatches</a>
+        <a href="{{ route('shop.index') }}">Fair-Trade Shop</a>
         <a href="{{ route('home') }}#news-events">News &amp; Events</a>
       </div>
       <div class="footer-col">
