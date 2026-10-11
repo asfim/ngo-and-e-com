@@ -57,6 +57,154 @@
         </div>
     </section>
 
+    {{-- News & Events (Integrated in Who We Are) --}}
+    <section class="ab-news" id="news-events">
+        <div class="wrap">
+            <div class="ab-news-head reveal">
+                <div>
+                    <div class="eyebrow">Stay informed &amp; engaged</div>
+                    <h2>News &amp; Events</h2>
+                    <p style="margin-top:10px; color:var(--ink); opacity:.8; max-width:54ch;">
+                        Updates from our ground operations, participatory media labs, research briefings, and upcoming community dialogues.
+                    </p>
+                </div>
+                <div class="ab-news-filters">
+                    <button type="button" class="news-filter-btn active" data-filter="all">All Updates</button>
+                    <button type="button" class="news-filter-btn" data-filter="news">Latest News</button>
+                    <button type="button" class="news-filter-btn" data-filter="event">Upcoming Events</button>
+                </div>
+            </div>
+
+            <div class="ab-news-grid">
+                <!-- Item 1: Event -->
+                <article class="news-card reveal" data-category="event">
+                    <div class="news-card-media">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="National Youth Peace Dialogue" loading="lazy">
+                        <span class="news-badge badge-event">Upcoming Event</span>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-date">
+                            <span>📅 Nov 14, 2026</span>
+                            <span>•</span>
+                            <span>10:00 AM BST</span>
+                        </div>
+                        <h3>National Dialogue on Peace &amp; Digital Safety</h3>
+                        <p>Convening 80+ youth peace fellows, journalists, and grassroots educators to analyze online hate speech patterns and build community resilience networks.</p>
+                        <div class="news-meta">
+                            <span>📍 Chittagong Hub &amp; Hybrid</span>
+                            <a href="{{ route('contact') }}" class="news-link">RSVP / Details <span>→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 2: News -->
+                <article class="news-card reveal" data-category="news">
+                    <div class="news-card-media">
+                        <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Parliamentary Policy Submission" loading="lazy">
+                        <span class="news-badge badge-news">Press Release</span>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-date">
+                            <span>📰 Oct 28, 2026</span>
+                            <span>•</span>
+                            <span>Policy Dispatch</span>
+                        </div>
+                        <h3>Parliamentary Brief on Returnee Migrant Worker Safety</h3>
+                        <p>Witness Foundation formally tabled an 18-month empirical investigation documenting returnee migrant grievances and recommended systemic legal protections.</p>
+                        <div class="news-meta">
+                            <span>📍 Dhaka HQ · Advocacy</span>
+                            <a href="{{ route('impact') }}" class="news-link">Read Brief <span>→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 3: Event -->
+                <article class="news-card reveal" data-category="event">
+                    <div class="news-card-media">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Voices of the Camps Film Showcase" loading="lazy">
+                        <span class="news-badge badge-event">Upcoming Event</span>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-date">
+                            <span>📅 Dec 05, 2026</span>
+                            <span>•</span>
+                            <span>Annual Showcase</span>
+                        </div>
+                        <h3>Voices of the Camps: Peace Media Film Festival 2026</h3>
+                        <p>Special screening of 12 participatory short films created entirely by refugee and host community youth trained in our participatory media lab.</p>
+                        <div class="news-meta">
+                            <span>📍 Cox's Bazar Cultural Centre</span>
+                            <a href="{{ route('projects') }}" class="news-link">Festival Info <span>→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 4: News -->
+                <article class="news-card reveal" data-category="news">
+                    <div class="news-card-media">
+                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Community Mediation Hub Ukhiya" loading="lazy">
+                        <span class="news-badge badge-news">Field Story</span>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-date">
+                            <span>📰 Sep 19, 2026</span>
+                            <span>•</span>
+                            <span>Field Impact</span>
+                        </div>
+                        <h3>Ukhiya Community Mediation Hub Resolves 120 Local Disputes</h3>
+                        <p>Independent evaluation highlights 94% satisfaction rating with volunteer-led restorative circles, averting prolonged legal battles and escalations.</p>
+                        <div class="news-meta">
+                            <span>📍 Cox's Bazar Field Station</span>
+                            <a href="{{ route('impact') }}" class="news-link">Read Story <span>→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 5: Event -->
+                <article class="news-card reveal" data-category="event">
+                    <div class="news-card-media">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Women Peacebuilders Symposium" loading="lazy">
+                        <span class="news-badge badge-event">Upcoming Event</span>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-date">
+                            <span>📅 Dec 18, 2026</span>
+                            <span>•</span>
+                            <span>Roundtable</span>
+                        </div>
+                        <h3>Women Peacebuilders Symposium: Grassroots Evidence to Action</h3>
+                        <p>Bringing together 50 female mediators and researchers to discuss gender-inclusive conflict prevention frameworks across rural Bangladesh.</p>
+                        <div class="news-meta">
+                            <span>📍 Dhaka HQ Seminar Hall</span>
+                            <a href="{{ route('contact') }}" class="news-link">Register <span>→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 6: News -->
+                <article class="news-card reveal" data-category="news">
+                    <div class="news-card-media">
+                        <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Research Report Release" loading="lazy">
+                        <span class="news-badge badge-news">Research Report</span>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-date">
+                            <span>📰 Aug 30, 2026</span>
+                            <span>•</span>
+                            <span>Publications</span>
+                        </div>
+                        <h3>New Research: Online Hate Speech Dynamics in Bangladesh</h3>
+                        <p>A comprehensive data study analyzing over 45,000 public social media comments to understand hate speech triggers and promote counter-narratives.</p>
+                        <div class="news-meta">
+                            <span>📍 Research &amp; Evidence Hub</span>
+                            <a href="{{ route('approach') }}" class="news-link">Download PDF <span>→</span></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     {{-- Leadership --}}
     <section class="ab-team">
         <div class="wrap">
@@ -108,3 +256,29 @@
         </div>
     </section>
 @endsection
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const filterBtns = document.querySelectorAll('.news-filter-btn');
+        const cards = document.querySelectorAll('.news-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
+@endpush
+

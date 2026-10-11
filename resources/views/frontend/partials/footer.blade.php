@@ -21,6 +21,7 @@
         <a href="{{ route('projects') }}">Projects</a>
         <a href="{{ route('impact') }}">Impact</a>
         <a href="{{ route('about') }}">About</a>
+        <a href="{{ route('about') }}#news-events">News &amp; Events</a>
       </div>
       <div class="footer-col">
         <h5>Connect</h5>

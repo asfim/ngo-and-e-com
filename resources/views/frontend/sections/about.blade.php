@@ -20,8 +20,30 @@
           <p>A peaceful, just, and inclusive world where every person, regardless of origin or circumstance, can live with dignity, safety, and opportunity.</p>
         </div>
       </div>
-      <div class="more-row left reveal">
+
+      <!-- Integrated News & Events in Who We Are -->
+      <div class="about-news-preview reveal">
+        <div class="about-news-header">
+          <div class="eyebrow">News &amp; Events</div>
+          <h4>Happening in our community</h4>
+        </div>
+        <div class="about-news-cards">
+          <a href="{{ route('about') }}#news-events" class="about-news-card">
+            <span class="badge-mini badge-event">Event · Nov 14</span>
+            <h5>National Dialogue on Peace &amp; Digital Safety</h5>
+            <small>Chittagong Hub &amp; Hybrid →</small>
+          </a>
+          <a href="{{ route('about') }}#news-events" class="about-news-card">
+            <span class="badge-mini badge-news">News · Oct 28</span>
+            <h5>Parliamentary Brief on Migrant Worker Safety</h5>
+            <small>Dhaka HQ · Advocacy →</small>
+          </a>
+        </div>
+      </div>
+
+      <div class="more-row left reveal" style="margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;">
         <a href="{{ route('about') }}" class="btn-more">More about us <span>→</span></a>
+        <a href="{{ route('about') }}#news-events" class="btn-more">All News &amp; Events <span>→</span></a>
       </div>
     </div>
   </div>

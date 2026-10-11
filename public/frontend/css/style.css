@@ -2238,6 +2238,95 @@ nav.desktop a.active {
   opacity: .88;
 }
 
+/* Integrated News & Events in About / Who we are */
+.about-news-preview {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--paper-line);
+}
+
+.about-news-header {
+  margin-bottom: 16px;
+}
+
+.about-news-header .eyebrow {
+  margin-bottom: 4px;
+}
+
+.about-news-header h4 {
+  font-size: 19px;
+  color: var(--ink);
+  font-weight: 600;
+  margin: 0;
+}
+
+.about-news-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.about-news-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px;
+  background: var(--paper-2);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.about-news-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--orange);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.badge-mini {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.badge-mini.badge-event {
+  background: var(--orange);
+  color: #FFFFFF;
+}
+
+.badge-mini.badge-news {
+  background: #111111;
+  color: #FFFFFF;
+}
+
+.about-news-card h5 {
+  font-size: 15px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.about-news-card small {
+  font-size: 12.5px;
+  color: var(--orange);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .about-news-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .reg-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

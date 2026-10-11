@@ -37,7 +37,9 @@ test('about page returns a successful response', function () {
         ->assertOk()
         ->assertViewIs('frontend.pages.about')
         ->assertSee('Societies Registration Act 1860')
-        ->assertSee('Headquarters');
+        ->assertSee('Headquarters')
+        ->assertSee('News &amp; Events', false)
+        ->assertSee('National Dialogue on Peace &amp; Digital Safety', false);
 });
 
 test('donate page returns a successful response', function () {
