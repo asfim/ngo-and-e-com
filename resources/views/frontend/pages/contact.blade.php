@@ -1,119 +1,97 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Contact Us — Witness Foundation')
+@section('title', 'Contact — Witness Foundation')
+
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('frontend/css/pages/contact.css') }}">
+@endpush
 
 @section('content')
-    <!-- ============ PAGE HERO ============ -->
-    <header class="page-hero">
-        <div class="wrap">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="{{ route('home') }}">Home</a>
-                <span class="sep">/</span>
-                <span>Contact</span>
+    {{-- Minimal hero --}}
+    <section class="ct-hero">
+        <div class="wrap reveal">
+            <nav class="ct-crumb" aria-label="Breadcrumb">
+                <a href="{{ route('home') }}">Home</a><span>/</span><span>Contact</span>
             </nav>
-            <div class="eyebrow">Dialogue &amp; Engagement</div>
-            <h1>We welcome <em>conversation</em>.</h1>
-            <p class="lead">Whether you are an affected community member, an institutional partner, a researcher, or a supporter, our team is ready to listen and respond.</p>
-        </div>
-    </header>
-
-    <!-- ============ CONTACT SECTION ============ -->
-    <section class="section" id="contact">
-        <div class="wrap">
-            <div class="contact-grid">
-                <!-- Contact Info Panel -->
-                <aside class="contact-info-panel reveal">
-                    <div class="eyebrow" style="margin-bottom:8px;">Direct Coordinates</div>
-                    <h3>Headquarters &amp; Field Stations</h3>
-                    <p style="font-size:14.5px; opacity:.8; line-height:1.6;">Our team operates from three dedicated locations across Bangladesh to stay anchored close to the issues.</p>
-
-                    <div class="contact-info-list">
-                        <div class="contact-info-item">
-                            <div class="icon">📍</div>
-                            <div>
-                                <h5>Dhaka Central Office (HQ)</h5>
-                                <p>Vision 71 Tower, House 28, Block E, Sector-2, Jahurul Islam Ave, Aftabnagar, Dhaka 1212, Bangladesh</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-info-item">
-                            <div class="icon">📞</div>
-                            <div>
-                                <h5>Telephone &amp; Hotline</h5>
-                                <p>+880 1729 794203<br><span style="font-size:12px; opacity:.7;">Sun – Thu: 9:00 AM – 5:30 PM (BST)</span></p>
-                            </div>
-                        </div>
-
-                        <div class="contact-info-item">
-                            <div class="icon">✉️</div>
-                            <div>
-                                <h5>Electronic Mail</h5>
-                                <p>
-                                    General: <a href="mailto:info@witnessfoundation.org.bd" style="color:var(--orange);">info@witnessfoundation.org.bd</a><br>
-                                    Programmes: <a href="mailto:programmes@witnessfoundation.org.bd" style="color:var(--orange);">programmes@witnessfoundation.org.bd</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="contact-info-item">
-                            <div class="icon">🏛️</div>
-                            <div>
-                                <h5>Statutory Information</h5>
-                                <p>Societies Registration Act: <strong>S-12727</strong><br>NGO Affairs Bureau: <strong>NGOAB No. 3276</strong></p>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-
-                <!-- Contact Form Panel -->
-                <div class="contact-form-panel reveal">
-                    <div class="eyebrow" style="margin-bottom:8px;">Send a Dispatch</div>
-                    <h3>Reach Out Directly</h3>
-                    <p class="sub">Fill out the form below. We review all community and institutional enquiries within two business days.</p>
-
-                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Your message has been received. Our team will contact you shortly.');">
-                        @csrf
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="contactName" class="form-label">Full Name *</label>
-                                <input type="text" id="contactName" name="name" class="form-control" placeholder="e.g. Tanvir Ahmed" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="contactEmail" class="form-label">Email Address *</label>
-                                <input type="email" id="contactEmail" name="email" class="form-control" placeholder="name@domain.org" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="contactPhone" class="form-label">Phone / WhatsApp</label>
-                                <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="+880 1XXXXXXXXX">
-                            </div>
-                            <div class="form-group">
-                                <label for="contactSubject" class="form-label">Topic / Enquiry Type *</label>
-                                <select id="contactSubject" name="subject" class="form-control" required>
-                                    <option value="">Select a topic</option>
-                                    <option value="dispute_mediation">Grievance &amp; Dispute Mediation</option>
-                                    <option value="partnership">Institutional Partnership</option>
-                                    <option value="youth_media">Participatory Filmmaking / Cohorts</option>
-                                    <option value="research">Empirical Research / Data Request</option>
-                                    <option value="general">General Support Enquiry</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="contactMessage" class="form-label">Your Message *</label>
-                            <textarea id="contactMessage" name="message" class="form-control" placeholder="Please outline the nature of your enquiry, community location, or proposal..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" style="padding:15px 32px; font-size:15px;">Send Message →</button>
-                    </form>
-                </div>
-            </div>
+            <h1>Let's start a <em>conversation</em>.</h1>
+            <p>Community member, partner, researcher or supporter — we read every message and reply within two working days.</p>
         </div>
     </section>
 
-    {{-- Closing CTA --}}
-    @include('frontend.sections.closing-cta')
+    {{-- Quick contact cards --}}
+    <section class="ct-quick">
+        <div class="wrap ct-quick-grid">
+            <a href="tel:+8801729794203" class="ct-q reveal"><div class="ic">📞</div><small>Call us</small><b>+880 1729 794203</b></a>
+            <a href="mailto:info@witnessfoundation.org.bd" class="ct-q reveal"><div class="ic">✉️</div><small>Email us</small><b>info@witnessfoundation.org.bd</b></a>
+            <a href="#map" class="ct-q reveal"><div class="ic">📍</div><small>Visit us</small><b>Aftabnagar, Dhaka 1212</b></a>
+        </div>
+    </section>
+
+    {{-- Form + map --}}
+    <section class="ct-main">
+        <div class="wrap ct-main-grid">
+            <div class="ct-form reveal">
+                <h2>Send us a message</h2>
+                <p>Pick a topic so we can route your message to the right team.</p>
+
+                <form id="contactForm">
+                    @csrf
+                    <div class="ct-topics">
+                        <input type="radio" name="topic" id="t1" value="partnership" checked><label for="t1">Partnership</label>
+                        <input type="radio" name="topic" id="t2" value="mediation"><label for="t2">Grievance mediation</label>
+                        <input type="radio" name="topic" id="t3" value="film"><label for="t3">Film cohort</label>
+                        <input type="radio" name="topic" id="t4" value="research"><label for="t4">Research</label>
+                        <input type="radio" name="topic" id="t5" value="other"><label for="t5">Other</label>
+                    </div>
+                    <div class="ct-row">
+                        <div class="ct-field"><label for="cName">Full name</label><input type="text" id="cName" name="name" required></div>
+                        <div class="ct-field"><label for="cEmail">Email</label><input type="email" id="cEmail" name="email" required></div>
+                    </div>
+                    <div class="ct-row">
+                        <div class="ct-field"><label for="cPhone">Phone / WhatsApp</label><input type="tel" id="cPhone" name="phone"></div>
+                        <div class="ct-field"><label for="cOrg">Organisation</label><input type="text" id="cOrg" name="organisation"></div>
+                    </div>
+                    <div class="ct-field"><label for="cMsg">Message</label><textarea id="cMsg" name="message" required></textarea></div>
+                    <button type="submit" class="ct-submit">Send message <span>→</span></button>
+                    <div class="ct-success" id="contactSuccess">✓ Thank you! Your message has been received — we'll be in touch soon.</div>
+                </form>
+            </div>
+
+            <aside class="ct-map-card reveal" id="map" data-tabs>
+                <iframe src="https://www.google.com/maps?q=Aftabnagar,Dhaka&amp;output=embed" loading="lazy" title="Witness Foundation location map" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="ct-otabs">
+                    <button type="button" class="active" data-tab="dhaka">Dhaka</button>
+                    <button type="button" data-tab="ctg">Chittagong</button>
+                    <button type="button" data-tab="cox">Cox's Bazar</button>
+                </div>
+                <div class="ct-opanel active" data-panel="dhaka">
+                    <h3>Dhaka — Headquarters</h3>
+                    <p>Vision 71 Tower, House 28, Block E, Sector-2, Jahurul Islam Ave, Aftabnagar, Dhaka 1212</p>
+                    <p><a href="mailto:info@witnessfoundation.org.bd">info@witnessfoundation.org.bd</a></p>
+                </div>
+                <div class="ct-opanel" data-panel="ctg">
+                    <h3>Chittagong — Regional office</h3>
+                    <p>Coastal community dialogue, returnee migrant support and regional youth forums.</p>
+                    <p><a href="mailto:info@witnessfoundation.org.bd">info@witnessfoundation.org.bd</a></p>
+                </div>
+                <div class="ct-opanel" data-panel="cox">
+                    <h3>Cox's Bazar — Field station</h3>
+                    <p>Participatory media lab and safe spaces for Rohingya and host community cohorts.</p>
+                    <p><a href="mailto:info@witnessfoundation.org.bd">info@witnessfoundation.org.bd</a></p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    {{-- Hours strip --}}
+    <section class="ct-hours">
+        <div class="wrap">
+            <div><b>Office hours</b><br><span>Sunday – Thursday · 9:00 AM – 5:30 PM (BST)</span></div>
+            <div class="socials">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="YouTube">▶</a>
+            </div>
+        </div>
+    </section>
 @endsection

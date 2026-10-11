@@ -32,6 +32,7 @@
 
     <!-- Frontend Scripts -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
+    <script src="{{ asset('frontend/js/pages.js') }}"></script>
     @stack('scripts')
 </body>
 </html>

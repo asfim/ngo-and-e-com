@@ -12,8 +12,8 @@ test('approach page returns a successful response', function () {
     $this->get(route('approach'))
         ->assertOk()
         ->assertViewIs('frontend.pages.approach')
-        ->assertSee('One mission, five')
-        ->assertSee('Participatory Media');
+        ->assertSee('One mission')
+        ->assertSee('Film &amp; participatory media', false);
 });
 
 test('projects page returns a successful response', function () {
@@ -21,7 +21,7 @@ test('projects page returns a successful response', function () {
         ->assertOk()
         ->assertViewIs('frontend.pages.projects')
         ->assertSee('National Migration Dialogue Series')
-        ->assertSee('Government Committee Engagement');
+        ->assertSee('Browse our work');
 });
 
 test('impact page returns a successful response', function () {
@@ -29,7 +29,7 @@ test('impact page returns a successful response', function () {
         ->assertOk()
         ->assertViewIs('frontend.pages.impact')
         ->assertSee('Sixteen years')
-        ->assertSee('BDT 61+ Lakh Mediated');
+        ->assertSee('Where our effort goes');
 });
 
 test('about page returns a successful response', function () {
@@ -37,14 +37,14 @@ test('about page returns a successful response', function () {
         ->assertOk()
         ->assertViewIs('frontend.pages.about')
         ->assertSee('Societies Registration Act 1860')
-        ->assertSee('Dhaka Central Office');
+        ->assertSee('Headquarters');
 });
 
 test('donate page returns a successful response', function () {
     $this->get(route('donate'))
         ->assertOk()
         ->assertViewIs('frontend.pages.donate')
-        ->assertSee('Official & Verified Contribution Channels')
+        ->assertSee('Make a gift')
         ->assertSee('BRAC Bank PLC');
 });
 
@@ -52,6 +52,6 @@ test('contact page returns a successful response', function () {
     $this->get(route('contact'))
         ->assertOk()
         ->assertViewIs('frontend.pages.contact')
-        ->assertSee('We welcome')
-        ->assertSee('Send a Dispatch');
+        ->assertSee('Send us a message')
+        ->assertSee('Office hours');
 });

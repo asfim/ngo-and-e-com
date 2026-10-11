@@ -18,7 +18,7 @@
       <div class="service-card-body">
         <h3>Stories by the people</h3>
         <p>Young people pick up the camera and document their own lives, communities and hopes.</p>
-        <a class="service-link" href="#stories">View stories</a>
+        <a class="service-link" href="{{ route('impact') }}">View stories</a>
       </div>
     </article>
 
@@ -30,7 +30,7 @@
       <div class="service-card-body">
         <h3>Technology for safety</h3>
         <p>Digital tools designed with migrant workers and communities, not simply deployed on them.</p>
-        <a class="service-link" href="#projects">View projects</a>
+        <a class="service-link" href="{{ route('projects') }}">View projects</a>
       </div>
     </article>
 
@@ -42,7 +42,7 @@
       <div class="service-card-body">
         <h3>Room for every voice</h3>
         <p>Structured conversations that turn disagreement across generations into workable understanding.</p>
-        <a class="service-link" href="#approach">Our approach</a>
+        <a class="service-link" href="{{ route('approach') }}">Our approach</a>
       </div>
     </article>
   </div>

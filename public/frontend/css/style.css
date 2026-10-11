@@ -156,6 +156,51 @@ button {
   transform: none;
 }
 
+/* "More" button used on home previews */
+.more-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.more-row.left {
+  justify-content: flex-start;
+  margin-top: 36px;
+}
+
+.btn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background .25s ease, border-color .25s ease, color .25s ease;
+}
+
+.btn-more span {
+  transition: transform .25s ease;
+}
+
+.btn-more:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+}
+
+.btn-more:hover span {
+  transform: translateX(4px);
+}
+
+.btn-more.light {
+  color: #fff;
+  border-color: rgba(255, 255, 255, .6);
+}
+
 /* documentary texture panel */
 .doc-panel {
   position: relative;

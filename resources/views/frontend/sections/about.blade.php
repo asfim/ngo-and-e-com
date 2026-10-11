@@ -1,4 +1,4 @@
-<!-- ============ ABOUT ============ -->
+<!-- ============ ABOUT (HOME PREVIEW) ============ -->
 <section class="section" id="about">
   <div class="wrap about-grid">
     <div class="about-visual reveal doc-panel">
@@ -19,18 +19,9 @@
           <h4>Vision</h4>
           <p>A peaceful, just, and inclusive world where every person, regardless of origin or circumstance, can live with dignity, safety, and opportunity.</p>
         </div>
-        <div class="about-block">
-          <h4>Governance</h4>
-          <p>Led by a 7-member independent Governing Board, providing oversight separate from day-to-day programme leadership.</p>
-        </div>
-        <div class="about-block">
-          <h4>Registration</h4>
-          <div class="reg-grid">
-            <div class="reg-item"><b>Societies Registration Act 1860</b>Reg. No. S-12727</div>
-            <div class="reg-item"><b>NGO Affairs Bureau</b>NGOAB No. 3276</div>
-            <div class="reg-item"><b>Compliance</b>Valid TIN &amp; VAT registration</div>
-          </div>
-        </div>
+      </div>
+      <div class="more-row left reveal">
+        <a href="{{ route('about') }}" class="btn-more">More about us <span>→</span></a>
       </div>
     </div>
   </div>

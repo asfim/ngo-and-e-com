@@ -2,145 +2,165 @@
 
 @section('title', 'Our Approach — Witness Foundation')
 
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('frontend/css/pages/approach.css') }}">
+@endpush
+
 @section('content')
-    <!-- ============ PAGE HERO ============ -->
-    <header class="page-hero">
-        <div class="wrap">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="{{ route('home') }}">Home</a>
-                <span class="sep">/</span>
-                <span>Our Approach</span>
-            </nav>
-            <div class="eyebrow">Philosophy &amp; Grounded Action</div>
-            <h1>One mission, five <em>instruments</em>.</h1>
-            <p class="lead">We reject the conventional top-down model. Peacebuilding must start with the people living the problem. Here is how we turn local insight into durable, systemic change.</p>
-        </div>
-    </header>
-
-    <!-- ============ 5 INSTRUMENTS DETAILED ============ -->
-    <section class="section" id="instruments">
-        <div class="wrap">
-            <div class="section-head reveal">
-                <div class="eyebrow">Core Methodologies</div>
-                <h2>How we engage friction and build trust</h2>
+    {{-- Split hero --}}
+    <section class="ap-hero">
+        <div class="wrap ap-hero-grid">
+            <div class="reveal">
+                <nav class="ap-crumb" aria-label="Breadcrumb">
+                    <a href="{{ route('home') }}">Home</a><span>/</span><span>Our Approach</span>
+                </nav>
+                <h1>One mission. <span>Five instruments.</span></h1>
+                <p class="lead">We reject the top-down model. Every programme begins with the people living the problem — then moves through listening, verification and evidence before it ever becomes a policy position.</p>
+                <div class="ap-jump">
+                    <a href="#film">01 · Film</a>
+                    <a href="#dialogue">02 · Dialogue</a>
+                    <a href="#digital">03 · Digital &amp; AI</a>
+                    <a href="#culture">04 · Culture</a>
+                    <a href="#research">05 · Research</a>
+                </div>
             </div>
-
-            <div class="approach-detailed-grid">
-                <article class="approach-detailed-card reveal">
-                    <div class="header-row">
-                        <div class="icon-wrap">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <rect x="2" y="6" width="15" height="12" rx="1"/>
-                                <path d="M17 10l5-3v10l-5-3"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="eyebrow" style="margin-bottom:4px;">01. Participatory Media</span>
-                            <h3>Film &amp; Visual Storytelling</h3>
-                        </div>
-                    </div>
-                    <p>Instead of bringing outside camera crews to portray vulnerable populations, we hand cameras, sound equipment, and editing suites directly to youth and community members. They decide what story matters, ensuring narratives preserve human dignity.</p>
-                    <div class="pill-list">
-                        <span class="pill">Youth Documentaries</span>
-                        <span class="pill">Cox's Bazar Filmmaking</span>
-                        <span class="pill">Peace Film Festival</span>
-                    </div>
-                </article>
-
-                <article class="approach-detailed-card reveal">
-                    <div class="header-row">
-                        <div class="icon-wrap">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <circle cx="8" cy="9" r="3.2"/>
-                                <circle cx="16" cy="15" r="3.2"/>
-                                <path d="M8 12.5V19M16 11.5V5"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="eyebrow" style="margin-bottom:4px;">02. Mediated Dialogue</span>
-                            <h3>Structured Multi-Generational Dialogue</h3>
-                        </div>
-                    </div>
-                    <p>We facilitate structured circles seating different generations, faiths, host and refugee populations at the same table. We do not demand immediate consensus; we facilitate the hard work of turning bitter disagreement into workable civic coexistence.</p>
-                    <div class="pill-list">
-                        <span class="pill">Shanti O Sampriti Sanglap</span>
-                        <span class="pill">Cross-Generational Circles</span>
-                        <span class="pill">Host-Refugee Trust</span>
-                    </div>
-                </article>
-
-                <article class="approach-detailed-card reveal">
-                    <div class="header-row">
-                        <div class="icon-wrap">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <rect x="3" y="4" width="18" height="13" rx="1"/>
-                                <path d="M9 21h6M12 17v4"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="eyebrow" style="margin-bottom:4px;">03. Technology For Peace</span>
-                            <h3>Digital Literacy &amp; AI Safety</h3>
-                        </div>
-                    </div>
-                    <p>Migrant workers and marginalized youth are frequently targets of digital disinformation, extortion, and surveillance. We co-design accessible smartphone toolkits that safeguard users from trafficking and online harm.</p>
-                    <div class="pill-list">
-                        <span class="pill">Migrant Safety Toolkits</span>
-                        <span class="pill">AI Counter-Disinformation</span>
-                        <span class="pill">Digital Ambassadors</span>
-                    </div>
-                </article>
-
-                <article class="approach-detailed-card reveal">
-                    <div class="header-row">
-                        <div class="icon-wrap">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <path d="M4 20V10a8 8 0 0 1 16 0v10"/>
-                                <path d="M4 20h16"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="eyebrow" style="margin-bottom:4px;">04. Shared Rituals</span>
-                            <h3>Culture, Arts &amp; Community Sports</h3>
-                        </div>
-                    </div>
-                    <p>Words can sometimes heighten ideological barriers; communal sports tournaments, theater, and traditional arts bypass rhetoric. They create spaces where divided communities build contact naturally before discussing thorny disputes.</p>
-                    <div class="pill-list">
-                        <span class="pill">Community Centers</span>
-                        <span class="pill">Inter-District Tournaments</span>
-                        <span class="pill">Folk &amp; Street Theater</span>
-                    </div>
-                </article>
-
-                <article class="approach-detailed-card reveal" style="grid-column: 1 / -1;">
-                    <div class="header-row">
-                        <div class="icon-wrap">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <path d="M4 4h13l3 3v13H4z"/>
-                                <path d="M9 9h7M9 13h7M9 17h4"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="eyebrow" style="margin-bottom:4px;">05. Systemic Advocacy</span>
-                            <h3>Empirical Research &amp; Policy Action</h3>
-                        </div>
-                    </div>
-                    <p>Ground-level peacebuilding is fragile if national institutions remain unresponsive. We document verifiable casework from grassroots dispute mediation, compile rigorous empirical policy briefs, and present them directly to government ministries and parliamentary committees.</p>
-                    <div class="pill-list">
-                        <span class="pill">Parliamentary Briefings</span>
-                        <span class="pill">Migration Policy Reform</span>
-                        <span class="pill">Grievance Casework</span>
-                    </div>
-                </article>
+            <div class="ap-hero-img reveal">
+                <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Young people in a community discussion">
+                <div class="ap-hero-badge"><b>16 yrs</b>of community-rooted peacebuilding across Bangladesh</div>
             </div>
         </div>
     </section>
 
-    {{-- Grounded Accountability Model --}}
-    @include('frontend.sections.gam')
+    {{-- Zig-zag chapters --}}
+    <section class="ap-chapters">
+        <div class="wrap">
+            <article class="ap-chapter" id="film">
+                <div class="ap-ch-media reveal">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Youth filmmaking cohort">
+                    <span class="tag">Participatory media</span>
+                </div>
+                <div class="ap-ch-copy reveal">
+                    <div class="ap-ch-num">01</div>
+                    <h2>Film &amp; participatory media</h2>
+                    <p>Instead of outside crews portraying vulnerable communities, we hand cameras and editing tools to young people. They decide what story matters — and how it is told with dignity.</p>
+                    <ul class="ap-ch-list">
+                        <li>Youth documentary cohorts in Cox's Bazar</li>
+                        <li>Community screenings in the same villages</li>
+                        <li>Bangladesh Peace Film Festival</li>
+                    </ul>
+                </div>
+            </article>
 
-    {{-- Programmes Feature --}}
-    @include('frontend.sections.services')
+            <article class="ap-chapter" id="dialogue">
+                <div class="ap-ch-media reveal">
+                    <img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Two generations in dialogue">
+                    <span class="tag">Dialogue</span>
+                </div>
+                <div class="ap-ch-copy reveal">
+                    <div class="ap-ch-num">02</div>
+                    <h2>Structured dialogue across divides</h2>
+                    <p>We seat generations, faiths, host and refugee communities at the same table. We don't force consensus — we facilitate the slow work of turning disagreement into coexistence.</p>
+                    <ul class="ap-ch-list">
+                        <li>Shanti O Sampriti Sanglap circles</li>
+                        <li>Grandparent–grandchild dialogue sessions</li>
+                        <li>Host–refugee trust building</li>
+                    </ul>
+                </div>
+            </article>
 
-    {{-- Closing CTA --}}
-    @include('frontend.sections.closing-cta')
+            <article class="ap-chapter" id="digital">
+                <div class="ap-ch-media reveal">
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Co-designing digital tools">
+                    <span class="tag">Digital &amp; AI</span>
+                </div>
+                <div class="ap-ch-copy reveal">
+                    <div class="ap-ch-num">03</div>
+                    <h2>Digital safety &amp; AI for peace</h2>
+                    <p>Migrant workers and youth are often targets of fraud, disinformation and surveillance. We co-design simple tools with them that protect against trafficking and online harm.</p>
+                    <ul class="ap-ch-list">
+                        <li>Migrant worker digital safety toolkit</li>
+                        <li>Counter-disinformation training</li>
+                        <li>Digital Peace Ambassadors network</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="ap-chapter" id="culture">
+                <div class="ap-ch-media reveal">
+                    <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Children at a cultural programme">
+                    <span class="tag">Culture &amp; sports</span>
+                </div>
+                <div class="ap-ch-copy reveal">
+                    <div class="ap-ch-num">04</div>
+                    <h2>Culture, arts &amp; sports</h2>
+                    <p>Shared rituals and play rebuild trust faster than argument. Tournaments, theatre and traditional arts create natural contact before difficult conversations begin.</p>
+                    <ul class="ap-ch-list">
+                        <li>Cultural centres for Rohingya &amp; host communities</li>
+                        <li>Inter-community sports tournaments</li>
+                        <li>Folk and street theatre</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="ap-chapter" id="research">
+                <div class="ap-ch-media reveal">
+                    <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Research and advocacy meeting">
+                    <span class="tag">Research &amp; advocacy</span>
+                </div>
+                <div class="ap-ch-copy reveal">
+                    <div class="ap-ch-num">05</div>
+                    <h2>Research &amp; policy advocacy</h2>
+                    <p>Grassroots work is fragile if institutions don't respond. We document casework, publish policy briefs and carry the evidence into ministries and parliamentary committees.</p>
+                    <ul class="ap-ch-list">
+                        <li>Parliamentary committee briefings</li>
+                        <li>Safe migration policy reform</li>
+                        <li>Grievance mediation casework data</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    {{-- Horizontal process --}}
+    <section class="ap-gam">
+        <div class="wrap">
+            <div class="ap-gam-head reveal">
+                <div>
+                    <div class="eyebrow">How we work</div>
+                    <h2>The Grounded Accountability Model</h2>
+                </div>
+                <p>Most organisations design a programme, then look for a community. We reverse the order — which keeps us honest about what we know, and who we answer to.</p>
+            </div>
+            <div class="ap-steps reveal">
+                <div class="ap-step"><div class="circle">1</div><div><h3>Community</h3><p>Start with people directly affected.</p></div></div>
+                <div class="ap-step"><div class="circle">2</div><div><h3>Listen</h3><p>Dialogue, film and field sessions.</p></div></div>
+                <div class="ap-step"><div class="circle">3</div><div><h3>Verify</h3><p>Cross-check every account and claim.</p></div></div>
+                <div class="ap-step"><div class="circle">4</div><div><h3>Evidence</h3><p>Build data and documented casework.</p></div></div>
+                <div class="ap-step"><div class="circle">5</div><div><h3>Policy action</h3><p>Carry findings to decision makers.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Principles --}}
+    <section class="ap-principles">
+        <div class="wrap">
+            <div class="ap-pr-head reveal">
+                <div class="eyebrow">What we believe</div>
+                <h2>Three principles behind every project</h2>
+            </div>
+            <div class="ap-pr-grid">
+                <div class="ap-pr reveal"><div class="q">“</div><h3>Lived experience is expertise</h3><p>The people closest to the problem understand it best. We design with them, never just for them.</p></div>
+                <div class="ap-pr reveal"><div class="q">“</div><h3>Dignity before data</h3><p>No story, image or statistic is worth more than the safety and consent of the person behind it.</p></div>
+                <div class="ap-pr reveal"><div class="q">“</div><h3>Evidence earns a seat</h3><p>We bring verified findings — not slogans — into the rooms where policy is written.</p></div>
+            </div>
+        </div>
+    </section>
+
+    {{-- CTA --}}
+    <section class="ap-cta">
+        <div class="wrap">
+            <h2>Want to build a programme with us?</h2>
+            <a href="{{ route('contact') }}" class="btn">Partner with us →</a>
+        </div>
+    </section>
 @endsection

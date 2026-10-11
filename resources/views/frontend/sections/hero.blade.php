@@ -7,7 +7,7 @@
       <h1>We witness what others overlook. <em>Then we act.</em></h1>
       <p class="lead">A camera in the hands of a Rohingya teenager. A grandfather and his granddaughter arguing, then agreeing, at the same table. A young woman in Cox's Bazar who applied alongside 192 others for a chance to tell her own story, and got it. This is what peacebuilding looks like when it starts with the people living the problem, not with a report about them.</p>
       <div class="ctas">
-        <a href="#donate" class="btn btn-primary">Support our work</a>
+        <a href="{{ route('donate') }}" class="btn btn-primary">Support our work</a>
         <a href="#stories" class="link-arrow">Read their stories →</a>
       </div>
     </div>

@@ -43,7 +43,7 @@
           <li>CAN I SUPPORT A SPECIFIC PROGRAMME?</li>
           <li>HOW DO RECURRING GIFTS WORK?</li>
         </ul>
-        <a class="calc-more" href="#donate">More information</a>
+        <a class="calc-more" href="{{ route('donate') }}">More information</a>
       </aside>
     </div>
   </div>

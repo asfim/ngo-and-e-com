@@ -3,54 +3,39 @@
 @section('title', 'Witness Foundation — Peace Begins With Me')
 
 @section('content')
-    {{-- Hero Section --}}
+    {{-- Hero --}}
     @include('frontend.sections.hero')
 
-    {{-- Scrolling Statement --}}
+    {{-- Statement --}}
     @include('frontend.sections.statement')
 
-    {{-- Programmes & Featured Services --}}
+    {{-- Programmes --}}
     @include('frontend.sections.services')
 
-    {{-- Child & Community Support Feature --}}
-    @include('frontend.sections.child-feature')
-
-    {{-- Approach (5 Instruments) --}}
+    {{-- Approach preview → /approach --}}
     @include('frontend.sections.approach')
 
-    {{-- Field Interactive Gallery --}}
+    {{-- Field gallery --}}
     @include('frontend.sections.field-gallery')
 
-    {{-- Support Calculator & FAQ --}}
-    @include('frontend.sections.support-calculator')
-
-    {{-- Grounded Accountability Model (GAM) --}}
-    @include('frontend.sections.gam')
-
-    {{-- Field Stories --}}
-    @include('frontend.sections.stories')
-
-    {{-- Ongoing Projects --}}
+    {{-- Ongoing projects preview → /projects --}}
     @include('frontend.sections.projects')
 
-    {{-- What's Next (Exploring) --}}
-    @include('frontend.sections.whats-next')
+    {{-- Stories preview → /impact --}}
+    @include('frontend.sections.stories')
 
-    {{-- Past Projects Timeline --}}
-    @include('frontend.sections.timeline')
-
-    {{-- News & Field Updates --}}
-    @include('frontend.sections.news')
-
-    {{-- Cumulative Impact Counters --}}
+    {{-- Impact numbers preview → /impact --}}
     @include('frontend.sections.impact')
 
-    {{-- About Us & Governance --}}
+    {{-- About preview → /about --}}
     @include('frontend.sections.about')
 
-    {{-- Marquee Photo Gallery --}}
+    {{-- Support calculator → /donate --}}
+    @include('frontend.sections.support-calculator')
+
+    {{-- Gallery --}}
     @include('frontend.sections.gallery-carousel')
 
-    {{-- Closing CTA --}}
+    {{-- Closing CTA → /donate --}}
     @include('frontend.sections.closing-cta')
 @endsection
