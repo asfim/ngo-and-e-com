@@ -34,14 +34,14 @@ test('impact page returns a successful response', function () {
         ->assertSee('Where our effort goes');
 });
 
-test('about page returns a successful response', function () {
+test('about page returns a successful response and does not contain news and events', function () {
     $this->get(route('about'))
         ->assertOk()
         ->assertViewIs('frontend.pages.about')
         ->assertSee('Societies Registration Act 1860')
         ->assertSee('Headquarters')
-        ->assertSee('News &amp; Events', false)
-        ->assertSee('National Dialogue on Peace &amp; Digital Safety', false);
+        ->assertDontSee('Field Updates &amp; Calendar', false)
+        ->assertDontSee('Voices of the Camps: Peace Media Film Festival', false);
 });
 
 test('donate page returns a successful response', function () {

@@ -197,4 +197,25 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { passive: true });
   }
+
+  // 10. News & Events category filter
+  const newsFilterBtns = document.querySelectorAll('.news-filter-btn');
+  const newsCards = document.querySelectorAll('.home-news-card, .news-card');
+  if (newsFilterBtns.length > 0 && newsCards.length > 0) {
+    newsFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        newsFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        newsCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
 });
+

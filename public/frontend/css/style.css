@@ -2333,11 +2333,51 @@ nav.desktop a.active {
   border-bottom: 1px solid var(--paper-line);
 }
 
+.home-news-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.home-news-head h2 {
+  font-size: clamp(32px, 4.2vw, 52px);
+  line-height: 1.05;
+  margin-top: 6px;
+}
+
+.ab-news-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.news-filter-btn {
+  background: transparent;
+  border: 1px solid var(--paper-line);
+  color: var(--ink);
+  padding: 8px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: all .25s ease;
+}
+
+.news-filter-btn.active,
+.news-filter-btn:hover {
+  background: var(--orange);
+  color: #FFFFFF;
+  border-color: var(--orange);
+}
+
 .home-news-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .home-news-card {
