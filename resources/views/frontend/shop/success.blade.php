@@ -7,6 +7,9 @@
 @endpush
 
 @section('content')
+    {{-- Unified E-Commerce Header Strip --}}
+    @include('frontend.partials.ecom-header')
+
     <section class="checkout-section">
         <div class="wrap">
             <div class="success-card reveal">

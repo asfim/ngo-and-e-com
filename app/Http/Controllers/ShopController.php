@@ -365,7 +365,7 @@ class ShopController extends Controller
 
         $relatedProducts = collect($this->products)
             ->where('id', '!==', $product['id'])
-            ->take(3)
+            ->take(4)
             ->values()
             ->all();
 

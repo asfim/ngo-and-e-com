@@ -8,53 +8,8 @@
 
 @section('content')
 <div class="ecom-page-wrap">
-    {{-- Top Utility Subheader (Search, Cart & Service Badges) --}}
-    <div class="ecom-topbar">
-        <div class="wrap ecom-topbar-inner">
-            <div class="ecom-top-left">
-                <span class="ecom-badge-pill">🔥 Super Deals</span>
-                <span>Fast 24-48h Delivery Across 64 Districts</span>
-            </div>
-            <div class="ecom-top-right">
-                <span>🛡️ 100% Authentic</span>
-                <span>•</span>
-                <span>🔄 7 Days Return</span>
-                <span>•</span>
-                <span>💰 Cash on Delivery</span>
-            </div>
-        </div>
-    </div>
-
-    {{-- Main E-Commerce Search & Category Row --}}
-    <div class="ecom-search-bar-wrap">
-        <div class="wrap ecom-search-bar-inner">
-            <div class="ecom-cat-dropdown-trigger">
-                <span class="cat-hamburger">☰</span>
-                <b>All Categories</b>
-                <span class="caret">▼</span>
-            </div>
-
-            <form action="{{ route('shop.index') }}" method="GET" class="ecom-main-search-form">
-                <input type="hidden" name="category" value="{{ $currentCategory }}">
-                <input type="search" name="q" value="{{ $search }}" placeholder="Search products, brands, models, gadgets..." class="ecom-search-box" aria-label="Search">
-                <button type="submit" class="ecom-search-btn">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    Search
-                </button>
-            </form>
-
-            <a href="{{ route('shop.checkout') }}" class="ecom-cart-trigger">
-                <div class="cart-icon-wrap">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-                    <span class="cart-counter">1</span>
-                </div>
-                <div class="cart-text">
-                    <small>My Cart</small>
-                    <b>৳1,850</b>
-                </div>
-            </a>
-        </div>
-    </div>
+    {{-- Unified E-Commerce Header Strip --}}
+    @include('frontend.partials.ecom-header')
 
     <div class="wrap">
         {{-- Hero Showcase Grid (Sidebar Categories + Big Slider Banner) --}}
@@ -395,3 +350,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 @endpush
+@php /* cart handled globally in main.js */ @endphp
+<style>
+/* shop page specific overrides if any */
+</style>
+<script>
+// Keep empty or for shop-specific extensions
+</script>
+
+

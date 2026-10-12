@@ -25,6 +25,16 @@
             <span class="sold-pill">{{ $item['sold_count'] ?? 120 }} sold</span>
         </div>
         <div class="ecom-card-actions">
+            <button type="button" 
+                    class="btn-ecom-add-cart js-add-to-cart" 
+                    data-id="{{ $item['id'] }}"
+                    data-slug="{{ $item['slug'] }}"
+                    data-name="{{ $item['name'] }}"
+                    data-price="{{ (int) $item['price'] }}"
+                    data-image="{{ $item['image'] }}"
+                    title="Add to Cart">
+                <span>🛒 Add to Cart</span>
+            </button>
             <a href="{{ route('shop.checkout', ['item' => $item['slug']]) }}" class="btn-ecom-action">Order Now ⚡</a>
         </div>
     </div>
