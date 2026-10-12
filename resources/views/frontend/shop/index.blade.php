@@ -3,7 +3,7 @@
 @section('title', 'Witness E-Commerce — Online Shopping in Bangladesh')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('frontend/css/pages/shop.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/pages/shop.css') }}?v={{ time() }}">
 @endpush
 
 @section('content')
@@ -61,7 +61,6 @@
         <div class="ecom-hero-grid">
             {{-- Left Category Sidebar --}}
             <aside class="ecom-sidebar-categories">
-                <div class="sidebar-header">Category Navigation</div>
                 <ul class="sidebar-cat-list">
                     @foreach($categories as $cat)
                         <li class="{{ $currentCategory === $cat['slug'] ? 'active' : '' }}">
@@ -76,9 +75,9 @@
             </aside>
 
             {{-- Big Center Hero Slider Banner --}}
-            <div class="ecom-hero-slider">
+            <div class="ecom-hero-slider" id="ecomHeroSlider">
                 <div class="hero-slider-slide active">
-                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=85" alt="Grand Mega Festival Sale">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=85" alt="Mega Electronics & Fashion Fair">
                     <div class="slide-overlay">
                         <span class="slide-pill">MEGA PROMOTION 2026</span>
                         <h2>Mega Electronics &amp; Fashion Fair</h2>
@@ -89,10 +88,42 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="hero-slider-slide">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85" alt="Exclusive Lifestyle & Fashion">
+                    <div class="slide-overlay">
+                        <span class="slide-pill">NEW ARRIVAL 2026</span>
+                        <h2>Exclusive Fashion &amp; Lifestyle</h2>
+                        <p>Discover handcrafted artisan collections, modest wear &amp; everyday comfort styles</p>
+                        <div class="slide-btns">
+                            <a href="{{ route('shop.index', ['category' => 'fashion']) }}" class="btn-slide-primary">Shop Fashion</a>
+                            <a href="{{ route('shop.index', ['category' => 'all']) }}" class="btn-slide-outline">View Catalog</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-slider-slide">
+                    <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=1200&q=85" alt="Smart Gadgets & Accessories">
+                    <div class="slide-overlay">
+                        <span class="slide-pill">TOP TECH PICKS</span>
+                        <h2>Smart Gadgets &amp; Premium Tech</h2>
+                        <p>Authentic quality smartwatches, audio devices &amp; everyday digital accessories</p>
+                        <div class="slide-btns">
+                            <a href="{{ route('shop.index', ['category' => 'electronics']) }}" class="btn-slide-primary">Shop Gadgets</a>
+                            <a href="{{ route('shop.index', ['category' => 'all']) }}" class="btn-slide-outline">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="slider-arrow prev" type="button" aria-label="Previous slide">&#10094;</button>
+                <button class="slider-arrow next" type="button" aria-label="Next slide">&#10095;</button>
+
+                <!-- Navigation Dots -->
                 <div class="slider-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
                 </div>
             </div>
         </div>
@@ -267,3 +298,100 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const slider = document.getElementById('ecomHeroSlider');
+    if (!slider) return;
+
+    const slides = slider.querySelectorAll('.hero-slider-slide');
+    const dots = slider.querySelectorAll('.slider-dots .dot');
+    const prevBtn = slider.querySelector('.slider-arrow.prev');
+    const nextBtn = slider.querySelector('.slider-arrow.next');
+
+    if (slides.length <= 1) return;
+
+    let currentIndex = 0;
+    let timer = null;
+    const intervalTime = 4500;
+
+    function goToSlide(index) {
+        slides[currentIndex].classList.remove('active');
+        if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
+
+        currentIndex = (index + slides.length) % slides.length;
+
+        slides[currentIndex].classList.add('active');
+        if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+    }
+
+    function nextSlide() {
+        goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentIndex - 1);
+    }
+
+    function startAutoplay() {
+        stopAutoplay();
+        timer = setInterval(nextSlide, intervalTime);
+    }
+
+    function stopAutoplay() {
+        if (timer) {
+            clearInterval(timer);
+            timer = null;
+        }
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            nextSlide();
+            startAutoplay();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            prevSlide();
+            startAutoplay();
+        });
+    }
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', function () {
+            goToSlide(idx);
+            startAutoplay();
+        });
+    });
+
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    slider.addEventListener('touchstart', function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoplay();
+    }, { passive: true });
+
+    slider.addEventListener('touchend', function (e) {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 45) {
+            nextSlide();
+        } else if (touchEndX - touchStartX > 45) {
+            prevSlide();
+        }
+        startAutoplay();
+    }, { passive: true });
+
+    startAutoplay();
+});
+</script>
+@endpush
