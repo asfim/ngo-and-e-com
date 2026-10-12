@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  // 2. Mobile drawer navigation
+  // 2. Mobile drawer navigation & subnav toggles
   const burger = document.getElementById('burgerBtn');
   const drawer = document.getElementById('mobileDrawer');
   if (burger && drawer) {
@@ -18,6 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const open = drawer.classList.toggle('open');
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+
+    // Submenu accordion toggles
+    drawer.querySelectorAll('.mobile-subnav-toggle').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const group = btn.closest('.mobile-subnav-group');
+        if (group) group.classList.toggle('open');
+      });
+    });
+
     drawer.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         drawer.classList.remove('open');
